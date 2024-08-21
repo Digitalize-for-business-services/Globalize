@@ -35,59 +35,29 @@
 
   <!-- Spinner -->
   <div id="spinner-container">
-    <svg class="pl" viewBox="0 0 128 128">
-        <defs>
-            <linearGradient id="pl-grad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#000" />
-                <stop offset="100%" stop-color="#fff" />
-            </linearGradient>
-            <mask id="pl-mask">
-                <rect x="0" y="0" width="128" height="128" fill="url(#pl-grad)" />
-            </mask>
-        </defs>
-        <g stroke-linecap="round" stroke-width="8" stroke-dasharray="32 32">
-            <g stroke="hsla(44, 97%, 65%, 0.98)">
-                <line class="pl__line1" x1="4" y1="48" x2="4" y2="80" />
-                <line class="pl__line2" x1="19" y1="48" x2="19" y2="80" />
-                <line class="pl__line3" x1="34" y1="48" x2="34" y2="80" />
-                <line class="pl__line4" x1="49" y1="48" x2="49" y2="80" />
-                <line class="pl__line5" x1="64" y1="48" x2="64" y2="80" />
-                <g transform="rotate(180,79,64)">
-                    <line class="pl__line6" x1="79" y1="48" x2="79" y2="80" />
-                </g>
-                <g transform="rotate(180,94,64)">
-                    <line class="pl__line7" x1="94" y1="48" x2="94" y2="80" />
-                </g>
-                <g transform="rotate(180,109,64)">
-                    <line class="pl__line8" x1="109" y1="48" x2="109" y2="80" />
-                </g>
-                <g transform="rotate(180,124,64)">
-                    <line class="pl__line9" x1="124" y1="48" x2="124" y2="80" />
-                </g>
-            </g>
-            <g stroke="hsla(41, 98%, 69%, 1)" mask="url(#pl-mask)">
-                <line class="pl__line1" x1="4" y1="48" x2="4" y2="80" />
-                <line class="pl__line2" x1="19" y1="48" x2="19" y2="80" />
-                <line class="pl__line3" x1="34" y1="48" x2="34" y2="80" />
-                <line class="pl__line4" x1="49" y1="48" x2="49" y2="80" />
-                <line class="pl__line5" x1="64" y1="48" x2="64" y2="80" />
-                <g transform="rotate(180,79,64)">
-                    <line class="pl__line6" x1="79" y1="48" x2="79" y2="80" />
-                </g>
-                <g transform="rotate(180,94,64)">
-                    <line class="pl__line7" x1="94" y1="48" x2="94" y2="80" />
-                </g>
-                <g transform="rotate(180,109,64)">
-                    <line class="pl__line8" x1="109" y1="48" x2="109" y2="80" />
-                </g>
-                <g transform="rotate(180,124,64)">
-                    <line class="pl__line9" x1="124" y1="48" x2="124" y2="80" />
-                </g>
-            </g>
-        </g>
-    </svg>
+    <video class="video-element" autoplay loop muted title="Loading Animation for Globalize Website" aria-label="Loading Spinner">
+      <source src="media/Spinner.mp4" type="video/mp4">
+      <p>Your browser does not support HTML5 video. Here is a <a href="media/Spinner.mp4">link to the video</a> instead.</p>
+    </video>
   </div>
-  
+
+  <!-- Whatsapp -->
+  <a href="https://api.whatsapp.com/send?phone=201555592535&text=Hello Globalize, I would like to inquire about your services." class="whatsapp_float" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp">
+    <span>Contact Us</span>
+  </a>
+
+  <!-- Alert -->
+  <div id="whatsapp-alert-form" class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <p>Leave your phone number, and we'll contact you on WhatsApp!</p>
+    <form id="contact-form">
+        <input type="text" id="phone" name="phone" placeholder="Your Phone Number" required>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+  </div>
+
   <!--==========================
     Top Bar
   ============================-->
@@ -131,7 +101,6 @@
             <li><a href="#portfolio">Projects</a></li>
             <li><a href="#blog">Blog</a></li>
             <li><a href="#team">Team</a></li>
-            <li><a href="#career">Career</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav><!-- #nav-menu-container -->        
@@ -141,31 +110,43 @@
     <!--==========================
       Intro Section
     ============================-->
-    <div class="gsapcontainer">
-      <section class="panel">
-        <video class="video-element" autoplay loop muted>
-          <source src="media/Slider-1.mp4" type="video/mp4">
-        </video>
-      </section>
-      <section class="panel">
-        <img class="image-element" src="media/Slider-2.png" alt="Translation services for legal documents by Globalize">
-        <div class="overlay-text">
-          <p>Enhance your legal translations with Globalize - Accuracy and Reliability.</p>
+    <!-- Start Slider -->
+    <div class="slider">
+        <div class="info">
+          <h1 class="headline-h5">Globalize - Your Gateway to Professional Translation Services</h1>
+          <p class="body-20-medium">At Globalize, we specialize in bridging language gaps with precision and reliability. Whether it's legal, medical, or technical translations, our expert team delivers accurate and culturally relevant translations that help your business connect globally.</p>          
         </div>
-      </section>
-      <section class="panel">
-        <img class="image-element" src="media/Slider-3.png" alt="Medical translation services by Globalize">
-        <div class="overlay-text">
-          <p>Globalize - Your partner for precise medical translations.</p>
+        <div class="list">
+            <div class="item">
+                <img src="media/slider-1.png" alt="">
+            </div>
+            <div class="item">
+                <img src="media/slider-2.png" alt="">
+            </div>
+            <div class="item">
+                <img src="media/slider-3.png" alt="">
+            </div>
+            <div class="item">
+                <img src="media/slider-4.png" alt="">
+            </div>
+            <div class="item">
+                <img src="media/slider-5.png" alt="">
+            </div>
         </div>
-      </section>
-      <section class="panel">
-        <img class="image-element" src="media/Slider-4.png" alt="Technical translation services by Globalize">
-        <div class="overlay-text">
-          <p>Globalize - Specialized technical translations for every industry.</p>
+        <div class="buttons">
+            <button id="prev"><</button>
+            <button id="next">></button>
         </div>
-      </section>
-    </div><!-- #intro -->
+        <ul class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>    
+    </div>
+    <!-- End Slider -->
+    <!-- #intro -->
 
     <main id="main">
 
@@ -487,56 +468,53 @@
               <div class="testimonial-item">
                 <p>
                   <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
-                  Globalize provided exceptional legal translation services for our firm. Their attention to detail and accuracy ensured that our documents were perfectly translated, maintaining their legal integrity.
+                  Excellent service provided by Globalize Group! 🌟 They are professional, affordable, and time efficient. The translation was accurate, and the communication was great. 📱 I didn’t have to go in person; everything was done online via WhatsApp. They helped me with translating important documents for my university applications. Highly recommend! 👍
                   <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
                 </p>
-                <img src="img/testimonial-1.png" class="testimonial-img" alt="Client Testimonial - James Watson">
-                <h3>James Watson</h3>
-                <h4>Legal Advisor</h4>
+                <h3>Mohammed Mustakin</h3>
               </div>
 
               <div class="testimonial-item">
                 <p>
                   <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
-                  The medical translation services offered by Globalize were top-notch. The translators were highly knowledgeable and delivered the translated documents on time with impeccable accuracy.
+                  One of the best translation service I ever dealt with. <br>
+                  I was too busy, I just sent a copy of the document on Whatsapp for a Visa process and the job has been done perfectly. <br>
+                  - excellent service <br>
+                  - very fast delivery time <br>
+                  - professional staff <br>
+                  I highly recommend them without hesitation. 
                   <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
                 </p>
-                <img src="img/testimonial-2.png" class="testimonial-img" alt="Client Testimonial - Emma Johnson">
-                <h3>James Anderson</h3>
-                <h4>Medical Researcher</h4>
+                <h3>idrissa ROUAMBA</h3>
               </div>
 
               <div class="testimonial-item">
                 <p>
                   <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
-                  Globalize helped us localize our e-commerce website, making it accessible to a global audience. Their work has significantly improved our international sales.
+                  This is one of the best experience that I ever had with a translation office and it was pretty rapid and accurate even though I was reaching them from a whole different country.
                   <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
                 </p>
-                <img src="img/testimonial-3.png" class="testimonial-img" alt="Client Testimonial - Michael Brown">
-                <h3>Michael Brown</h3>
-                <h4>E-commerce Director</h4>
+                <h3>Mahmoud Abd alkhaleq</h3>
               </div>
 
               <div class="testimonial-item">
                 <p>
                   <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
-                  As a freelance translator, I’ve collaborated with Globalize on several projects. Their professionalism and commitment to quality make them a reliable partner.
+                  It's a very good place for translating documents. Their prices are affordable. Good people and very good service from them. I highly recommend this place to anyone who wants to translate their documents. They do it in a very professional way as it looks in the original documents. Thank you very much especially to Nada for their kind patience and service.
                   <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
                 </p>
-                <img src="img/testimonial-4.png" class="testimonial-img" alt="Client Testimonial - Sarah Lee">
-                <h3>Michael Clark</h3>
-                <h4>Freelance Translator</h4>
+                <h3>Hussain Abdulla</h3>
               </div>
 
               <div class="testimonial-item">
                 <p>
                   <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
-                  I was impressed by the speed and accuracy of Globalize's translation services. They made sure our technical manuals were perfectly translated and ready for global distribution.
+                  They are professional and very cooperative and also very fast. <br>
+                  In addition, wherever your location you can contact with them through Whatsapp and complete your requirements. <br>
+                  Thanks
                   <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
                 </p>
-                <img src="img/testimonial-5.png" class="testimonial-img" alt="Client Testimonial - David Smith">
-                <h3>David Smith</h3>
-                <h4>Technical Director</h4>
+                <h3>ASHRAF SALAMA SALAMA</h3>
               </div>
 
           </div>
@@ -804,45 +782,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script>
-      gsap.registerPlugin(ScrollTrigger);
-
-      let sections = gsap.utils.toArray(".panel");
-
-      gsap.to(sections, {
-      xPercent: -100 * (sections.length - 1),
-      ease: "none",
-      scrollTrigger: {
-          trigger: ".gsapcontainer",
-          pin: true,
-          scrub: 1.5,
-          snap: {
-              snapTo: 1 / (sections.length - 1),
-              duration: {min: 0.2, max: 0.5},
-              ease: "power1.inOut"
-          },
-          end: () => "+=" + document.querySelector(".gsapcontainer").offsetWidth
-      }
-      });
-
-      document.addEventListener("DOMContentLoaded", function() {
-      gsap.utils.toArray('.panel').forEach((panel) => {
-        const overlayText = panel.querySelector('.overlay-text');
-        
-        panel.addEventListener('mouseenter', function() {
-          gsap.to(overlayText, { y: '-50%', opacity: 1, duration: 1, ease: 'power4.out' });
-        });
-
-        panel.addEventListener('mouseleave', function() {
-          gsap.to(overlayText, { y: '50%', opacity: 0, duration: 1, ease: 'power4.out' });
-        });
-      });
-    });
 
       // Hide spinner after 3 seconds
       window.addEventListener('load', function() {
           setTimeout(function() {
               document.getElementById('spinner-container').classList.add('hidden');
-          }, 2500);
+          }, 4000);
       });
 
       // Function to check if element is in viewport
